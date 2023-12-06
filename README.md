@@ -16,9 +16,18 @@ touch README.md
 ## Passo 2.1: Criando a solução (Blank Solution)
 dotnet new sln --name CleanArch
 
-## Passo 2.2: Criando os 4 projetos (Class Library - .NET Core)
+## Passo 2.2: Criando os primeiros 4 projetos (Class Library - .NET Core)
 dotnet new classlib --name CleanArch.Domain -f net5.0
 dotnet new classlib --name CleanArch.Application -f net5.0
 dotnet new classlib --name CleanArch.Infra.Data -f net5.0
 dotnet new classlib --name CleanArch.Infra.IoC -f net5.0
+
+## Em seguida será o MVC: dotnet new mvc --name CleanArch.WebUI -f net5.0
+
+## Passo 2.3: Criando o projeto 5 em MVC (ASP.NET Core Web Application - ASP.NET Core 5.0)
+### Usando o Visual Studio 2019: ASP.NET Core: ASP.NET Core Web App(Model-View-Controller)
+### Deveria marcar a opçao avancada  - Configure HTTPS
+### Para esse projeto foi habilitado o Razor runtime compilation
+dotnet new mvc --name CleanArch.WebUI -f net5.0
+
 
