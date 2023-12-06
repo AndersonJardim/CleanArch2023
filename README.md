@@ -15,3 +15,10 @@ touch README.md
 
 ## Passo 2.1: Criando a solução (Blank Solution)
 dotnet new sln --name CleanArch
+
+## Passo 2.2: Criando os 4 projetos (Class Library - .NET Core)
+dotnet new classlib --name CleanArch.Domain -f net5.0
+dotnet new classlib --name CleanArch.Application -f net5.0
+dotnet new classlib --name CleanArch.Infra.Data -f net5.0
+dotnet new classlib --name CleanArch.Infra.IoC -f net5.0
+
