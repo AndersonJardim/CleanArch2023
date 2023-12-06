@@ -30,4 +30,13 @@ dotnet new classlib --name CleanArch.Infra.IoC -f net5.0
 ### Para esse projeto foi habilitado o Razor runtime compilation
 dotnet new mvc --name CleanArch.WebUI -f net5.0
 
+## Passo 2.4: Adicionado os projetos na solucão
+## dotnet sln add CleanArch.Domain/CleanArch.Domain.csproj
+## dotnet sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
+## dotnet sln add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
+## ou
+dotnet sln CleanArch.sln add CleanArch.Domain/CleanArch.Domain.csproj
+dotnet sln CleanArch.sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
+dotnet sln CleanArch.sln add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
+
 
