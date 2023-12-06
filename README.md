@@ -13,6 +13,8 @@ dotnet --list-sdks
 dotnet new gitignore
 touch README.md
 
+code .
+
 ## Passo 2.1: Criando a solução (Blank Solution)
 dotnet new sln --name CleanArch
 
@@ -38,5 +40,33 @@ dotnet new mvc --name CleanArch.WebUI -f net5.0
 dotnet sln CleanArch.sln add CleanArch.Domain/CleanArch.Domain.csproj
 dotnet sln CleanArch.sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
 dotnet sln CleanArch.sln add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
+
+### Passo 2.5: Adicionado Referências
+### Passo 2.5.1 # Adicionado Referências na camada Application, referencie a camada Domain
+dotnet add CleanArch.Application/CleanArch.Application.csproj reference CleanArch.Domain/CleanArch.Domain.csproj
+
+### Passo 2.5.2 # Adicionado Referências na camada Infra.Data, referencie a camada Domain
+dotnet add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj reference CleanArch.Domain/CleanArch.Domain.csproj
+
+### Passo 2.5.3 # Adicionado Referências na camada Infra.IoC, referencie as camadas Application e Infra.Data
+dotnet add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj reference CleanArch.Domain/CleanArch.Domain.csproj
+dotnet add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj reference CleanArch.Application/CleanArch.Application.csproj
+dotnet add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj reference CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
+
+### Passo 2.5.4 # Adicionado Referências na camada WebIU, referencie a camada Infra.IoC
+dotnet add CleanArch.WebIU/CleanArch.WebIU.csproj reference CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
+
+## Executando direto na pasta inicial
+cls
+dotnet restore
+dotnet build
+dotnet run --project .\CleanArch.WebUI\CleanArch.WebUI.csproj
+
+### Resumo do passo 2
+## Domain - Não depende de nenhum.
+## Application - Dependêcia com o projeto: Domain
+## Infra.Data - Dependêcia com o projeto: Domain
+## Infra.IoC - Dependêcia com o projeto: Domain, Application, Infra.Data
+## WebUI - Dependêcia com o projeto: Infra.IoC
 
 
