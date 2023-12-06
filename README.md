@@ -12,3 +12,6 @@ dotnet --list-sdks
 ## Passo 1: Preparando o ambiente
 dotnet new gitignore
 touch README.md
+
+## Passo 2.1: Criando a solução (Blank Solution)
+dotnet new sln --name CleanArch
