@@ -45,9 +45,9 @@ dotnet new classlib --name CleanArch.Infra.IoC -f net5.0
 ## Em seguida será o MVC: dotnet new mvc --name CleanArch.WebUI -f net5.0
 
 ## Passo 2.3: Criando o projeto 5 em MVC (ASP.NET Core Web Application - ASP.NET Core 5.0)
-Usando o Visual Studio 2019: ASP.NET Core: ASP.NET Core Web App(Model-View-Controller)
-Deveria marcar a opçao avancada  - Configure HTTPS
-Para esse projeto foi habilitado o Razor runtime compilation
+Usando o Visual Studio 2019: ASP.NET Core: ASP.NET Core Web App(Model-View-Controller)<br />
+Deveria marcar a opçao avancada  - Configure HTTPS<br />
+Para esse projeto foi habilitado o Razor runtime compilation<br />
 ```bash
 dotnet new mvc --name CleanArch.WebUI -f net5.0
 ```
@@ -55,11 +55,11 @@ dotnet new mvc --name CleanArch.WebUI -f net5.0
 ## Passo 2.4: Adicionado os projetos na solucão
 
 ### Resumo do passo 2.4
-Domain - Não depende de nenhum.
-Application - Dependêcia com o projeto: Domain
-Infra.Data - Dependêcia com o projeto: Domain
-Infra.IoC - Dependêcia com o projeto: Domain, Application, Infra.Data
-WebUI - Dependêcia com o projeto: Infra.IoC
+Domain - Não depende de nenhum.<br />
+Application - Dependêcia com o projeto: Domain<br />
+Infra.Data - Dependêcia com o projeto: Domain<br />
+Infra.IoC - Dependêcia com o projeto: Domain, Application, Infra.Data<br />
+WebUI - Dependêcia com o projeto: Infra.IoC<br />
 
 ## Opção 1:
 ```bash
@@ -105,7 +105,7 @@ dotnet build
 dotnet run --project .\CleanArch.WebUI\CleanArch.WebUI.csproj
 ```
 
-Este projeto está em constantes melhorias.
+Este projeto está em constantes melhorias.<br />
 Anderson Jardim
 
 ## Minhas Redes
