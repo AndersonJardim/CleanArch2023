@@ -1,13 +1,12 @@
 # CleanArch2023
 
- Resumo documentado do meu modo de montar meu ambiente em **Clean Arch MVC**.
+Resumo documentado do meu modo de montar meu ambiente em **Clean Arch MVC**.
+Para esse projeto, desenvolvi na versão 5, podendo ser adaptavél com pouco esforço com as versões 6, 7 e 8.
  
 <h1 align="center">
     <img src="./public/dotnet.jpg" width="300"/>
 </h1>
 
-## 💻 Requisitos
-Para esse projeto, desenvolvi na versão 5, podendo ser adaptavél com pouco esforço com as versões 6, 7 e 8.
 
 ## 💻 Requisitos e Verificações de SDKs instaladas, mas usei a 5
 
@@ -118,6 +117,6 @@ Este projeto está em constantes melhorias.<br />
 
 ## 📱 Minhas Redes
 
-Meu site: [anderson-jardim](https://www.linkedin.com/in/anderson-jardim/) &nbsp;&middot;&nbsp; 
+Linkedin: [anderson-jardim](https://www.linkedin.com/in/anderson-jardim/) &nbsp;&middot;&nbsp; 
 
 Github: [@AndersonJardim](https://github.com/AndersonJardim) &nbsp;&middot;&nbsp;
