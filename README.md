@@ -6,7 +6,8 @@
     <img src="./public/dotnet.jpg" width="300"/>
 </h1>
 
-## 💻 Verificações
+## 💻 Verificações de SDKs instaladas, mas usei a 5
+```bash
 dotnet --list-sdks
 3.1.426 [C:\Program Files\dotnet\sdk]
 5.0.416 [C:\Program Files\dotnet\sdk]
@@ -16,6 +17,10 @@ dotnet --list-sdks
 7.0.102 [C:\Program Files\dotnet\sdk]
 7.0.404 [C:\Program Files\dotnet\sdk]
 8.0.100 [C:\Program Files\dotnet\sdk]
+
+dotnet --version
+8.0.100
+```
 
 ## 🚀 Passo 1: Preparando o ambiente
 ```bash
@@ -48,10 +53,21 @@ dotnet new mvc --name CleanArch.WebUI -f net5.0
 ```
 
 ## Passo 2.4: Adicionado os projetos na solucão
-## dotnet sln add CleanArch.Domain/CleanArch.Domain.csproj
-## dotnet sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
-## dotnet sln add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
-## ou
+
+### Resumo do passo 2.4
+Domain - Não depende de nenhum.
+Application - Dependêcia com o projeto: Domain
+Infra.Data - Dependêcia com o projeto: Domain
+Infra.IoC - Dependêcia com o projeto: Domain, Application, Infra.Data
+WebUI - Dependêcia com o projeto: Infra.IoC
+
+## Opção 1:
+```bash
+dotnet sln add CleanArch.Domain/CleanArch.Domain.csproj
+dotnet sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
+dotnet sln add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
+```
+## Opção 2:
 ```bash
 dotnet sln CleanArch.sln add CleanArch.Domain/CleanArch.Domain.csproj
 dotnet sln CleanArch.sln add CleanArch.Infra.Data/CleanArch.Infra.Data.csproj
@@ -79,8 +95,8 @@ dotnet add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj reference CleanArch.In
 ### Passo 2.5.4 # Adicionado Referências na camada WebIU, referencie a camada Infra.IoC
 ```bash
 dotnet add CleanArch.WebIU/CleanArch.WebIU.csproj reference CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
-
 ```
+
 ## Executando direto na pasta inicial
 ```bash
 cls
@@ -89,17 +105,8 @@ dotnet build
 dotnet run --project .\CleanArch.WebUI\CleanArch.WebUI.csproj
 ```
 
-### Resumo do passo 2
-## Domain - Não depende de nenhum.
-## Application - Dependêcia com o projeto: Domain
-## Infra.Data - Dependêcia com o projeto: Domain
-## Infra.IoC - Dependêcia com o projeto: Domain, Application, Infra.Data
-## WebUI - Dependêcia com o projeto: Infra.IoC
-
-
 Este projeto está em constantes melhorias.
 Anderson Jardim
-
 
 ## Minhas Redes
 
