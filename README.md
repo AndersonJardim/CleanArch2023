@@ -1,12 +1,16 @@
 # CleanArch2023
 
- Resumo documentado do meu modo de montar meu ambiente em **Clean Arch em .NET 5**.0, memso tendo as versões 6, 7 e 8. Mas que pode ser atualizado, com pouco esforço.
-
+ Resumo documentado do meu modo de montar meu ambiente em **Clean Arch MVC**.
+ 
 <h1 align="center">
     <img src="./public/dotnet.jpg" width="300"/>
 </h1>
 
-## 💻 Verificações de SDKs instaladas, mas usei a 5
+## 💻 Requisitos
+Para esse projeto, desenvolvi na versão 5, podendo ser adaptavél com pouco esforço com as versões 6, 7 e 8.
+
+## 💻 Requisitos e Verificações de SDKs instaladas, mas usei a 5
+
 ```bash
 dotnet --list-sdks
 3.1.426 [C:\Program Files\dotnet\sdk]
@@ -97,7 +101,10 @@ dotnet add CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj reference CleanArch.In
 dotnet add CleanArch.WebIU/CleanArch.WebIU.csproj reference CleanArch.Infra.IoC/CleanArch.Infra.IoC.csproj
 ```
 
-## Executando direto na pasta inicial
+## 🔧 Compilação
+
+Para compilar a aplicação para produção, execute o seguinte comando direto na pasta inicial:
+
 ```bash
 cls
 dotnet restore
@@ -105,10 +112,11 @@ dotnet build
 dotnet run --project .\CleanArch.WebUI\CleanArch.WebUI.csproj
 ```
 
+## 📝 Um pouco mais sobre o projeto
 Este projeto está em constantes melhorias.<br />
-Anderson Jardim
+👉 Anderson Jardim
 
-## Minhas Redes
+## 📱 Minhas Redes
 
 Meu site: [anderson-jardim](https://www.linkedin.com/in/anderson-jardim/) &nbsp;&middot;&nbsp; 
 
