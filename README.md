@@ -3,7 +3,7 @@
  Resumo documentado do meu modo de montar meu ambiente em **Clean Arch em .NET 5**.0, memso tendo as versões 6, 7 e 8. Mas que pode ser atualizado, com pouco esforço.
 
 <h1 align="center">
-    <img src="./public/dotnet.png" width="300"/>
+    <img src="./public/dotnet.jpg" width="300"/>
 </h1>
 
 ## 💻 Verificações
